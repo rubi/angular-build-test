@@ -17,9 +17,6 @@
                 "build": {
                     "builder": "@angular-builders/custom-webpack:browser",
                     "options": {
-                        "customWebpackConfig": {
-                            "path": "./extra-webpack.config.js"
-                        },
                         "outputPath": "dist/angular7-study",
                         "index": "src/index.html",
                         "main": "src/main.ts",
@@ -47,7 +44,7 @@
                             "outputHashing": "all",
                             "sourceMap": false,
                             "extractCss": true,
-                            "namedChunks": false,
+                            "namedChunks": true,
                             "aot": true,
                             "extractLicenses": true,
                             "vendorChunk": true,
@@ -55,7 +52,7 @@
                             "budgets": [
                                 {
                                     "type": "all",
-                                    "maximumWarning": "2mb",
+                                    "maximumWarning": "20kb",
                                     "maximumError": "5mb"
                                 }
                             ]
