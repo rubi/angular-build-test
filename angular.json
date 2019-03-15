@@ -15,7 +15,7 @@
       },
       "architect": {
         "build": {
-          "builder": "@angular-builders/build-angular:build",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/angular7-study",
             "index": "src/index.html",
@@ -53,12 +53,36 @@
               "aot": true,
               "extractLicenses": true,
               "vendorChunk": true,
+              "commonChunk": true,
               "buildOptimizer": true,
               "budgets": [
                 {
-                  "type": "all",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
+                  "type": "bundle",
+                  "name": "polyfills",
+                  "baseline": "40kb",
+                  "maximumWarning": "50kb",
+                  "maximumError": "100kb"
+                },
+                {
+                  "type": "bundle",
+                  "name": "vendor",
+                  "baseline": "900kb",
+                  "maximumWarning": "500kb",
+                  "maximumError": "200kb"
+                },
+                {
+                  "type": "bundle",
+                  "name": "styles",
+                  "baseline": "500kb",
+                  "maximumWarning": "100kb",
+                  "maximumError": "100kb"
+                },
+                {
+                  "type": "bundle",
+                  "name": "main",
+                  "baseline": "50kb",
+                  "maximumWarning": "50kb",
+                  "maximumError": "100kb"
                 }
               ]
             }
