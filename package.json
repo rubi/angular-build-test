@@ -9,7 +9,9 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "analyze": "ng build --prod --stats-json && webpack-bundle-analyzer dist/angular7-study/stats.json",
-    "report": "webpack-bundle-analyzer dist/angular7-study/stats.json"
+    "report": "webpack-bundle-analyzer dist/angular7-study/stats.json",
+    "startPlus": "ng serve --extra-webpack-config webpack.externals.js",
+    "buildPlus": "ng build --extra-webpack-config webpack.externals.js --prod  --stats-json && webpack-bundle-analyzer dist/angular7-study/stats.json"
   },
   "private": true,
   "dependencies": {
@@ -22,9 +24,13 @@
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
     "ant-design-vue": "^1.3.5",
+    "copy": "^0.3.2",
     "core-js": "^2.5.4",
+    "moment": "^2.24.0",
     "ng-zorro-antd": "^7.0.2",
+    "ngx-build-plus": "^7.7.6",
     "rxjs": "~6.3.3",
+    "systemjs": "^3.0.2",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
   },

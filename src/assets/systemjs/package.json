@@ -1,0 +1,115 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "systemjs",
+        "scope": null,
+        "escapedName": "systemjs",
+        "name": "systemjs",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/seven/seven/angular/angular-build-ng"
+    ]
+  ],
+  "_from": "systemjs@latest",
+  "_hasShrinkwrap": false,
+  "_id": "systemjs@3.0.2",
+  "_inCache": true,
+  "_location": "/systemjs",
+  "_nodeVersion": "10.15.3",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/systemjs_3.0.2_1552837039943_0.6522433441656372"
+  },
+  "_npmUser": {
+    "name": "guybedford",
+    "email": "guybedford@gmail.com"
+  },
+  "_npmVersion": "6.4.1",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "systemjs",
+    "scope": null,
+    "escapedName": "systemjs",
+    "name": "systemjs",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/systemjs/-/systemjs-3.0.2.tgz",
+  "_shasum": "63c1bf7612ecf669f8779803d390d5fada09311d",
+  "_shrinkwrap": null,
+  "_spec": "systemjs",
+  "_where": "/Users/seven/seven/angular/angular-build-ng",
+  "author": {
+    "name": "Guy Bedford"
+  },
+  "bugs": {
+    "url": "https://github.com/systemjs/systemjs/issues"
+  },
+  "dependencies": {},
+  "description": "Dynamic ES module loader",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-rc.1",
+    "@babel/core": "^7.0.0-rc.1",
+    "@babel/plugin-syntax-import-meta": "^7.0.0-rc.1",
+    "@babel/plugin-transform-modules-systemjs": "^7.0.0-rc.1",
+    "bluebird": "^3.5.1",
+    "esm": "^3.0.77",
+    "mocha": "^5.2.0",
+    "rollup": "^0.64.1",
+    "rollup-plugin-replace": "^2.0.0",
+    "terser": "^3.8.1",
+    "whatwg-fetch": "^2.0.4"
+  },
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-FLtU3infVIudyWsAcAqAKQz9SNWTWzRcDhIOvDqo8xK9kMd4QinFgTvT1SJqBKfPsscx2FGo4wcYra5aM/ehqg==",
+    "shasum": "63c1bf7612ecf669f8779803d390d5fada09311d",
+    "tarball": "https://registry.npmjs.org/systemjs/-/systemjs-3.0.2.tgz",
+    "fileCount": 25,
+    "unpackedSize": 100690,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcjmmwCRA9TVsSAnZWagAA/jkP/1Ptb52LZwpfAOjkwXSU\nhhw/G8Q7w5tzvvvdDeMNBD43FC1KwELQHXNIp+ESdnsZ3pgpkSdwtREYZ76U\nXM+FitC+42AGfKV1hrcbZQ1/LlCpl4yZJoHfG1gC1i1KtcIWkTtLg41y/ki+\ntBjAXEK71jvgs7Ejyb7faWN9DX8KgSBl3F2ObKYB+yglRdIWnxy1+3LS36DR\n5p+SqCTUh7P/hNsh44GK29Ja3pKlyqgCiC7e0u7hOiJYqE+l1KzEps4CE55u\nPnXAXtMY5tlJBuRV+UfuIJ1Qn+q1+WTC5UJ8ZEfqs/Qf/orHVHLA7E9FBohf\nE7yys6BBL2gRxv/T82cEHVF1g2yztppXOMfxzqaajssbnnbvlahDR9CEGOmw\niV0Ehi+ZxWfs9wGlMHhWo0hPGPOM7Obbwd5kgXwX9xBZu2v6DmNCigNPx5UH\nO+yRNo56yfv+kB3aTmhI1DEdRwv/+P3LTpixDPR6M+rE5HZPaVJWrsX0H7K+\nZKldt9dneInbKF+B8LgXa3DI0BgNPjpVz/UcFiZzcV8az7ayPM9BzQ3tA3B3\nWLgE+auCRsLNrYyX/s3YOGYRgsoq0Z1Z4fUg1d9y4wGdOC7s1bkcw/bkuZxf\nivvrKGj8PFPyOmvPqOGEDatJry0NECB0mm1wdL8wh0euHHpO2AKWEM92muxm\nW6q3\r\n=Q5qT\r\n-----END PGP SIGNATURE-----\r\n"
+  },
+  "gitHead": "1da68208589aa6c2ee5d68fd9fdfaece63e46810",
+  "homepage": "https://github.com/systemjs/systemjs#readme",
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "guybedford",
+      "email": "guybedford@gmail.com"
+    }
+  ],
+  "mode": "esm",
+  "name": "systemjs",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/systemjs/systemjs.git"
+  },
+  "scripts": {
+    "build": "npm run build:systemjs && npm run build:sjs && npm run min && npm run build:extras",
+    "build:extras": "bash minify-extras.sh",
+    "build:sjs": "rollup -c --environment sjs",
+    "build:systemjs": "rollup -c",
+    "footprint": "npm run footprint:systemjs && npm run footprint:sjs",
+    "footprint:sjs": "terser dist/s.js -c passes=2 -m | gzip -9f | wc -c",
+    "footprint:systemjs": "terser dist/system.js -c passes=2 -m | gzip -9f | wc -c",
+    "min": "npm run min:systemjs && npm run min:sjs",
+    "min:sjs": "cd dist && terser s.js -c passes=2 -m --source-map -o s.min.js",
+    "min:systemjs": "cd dist && terser system.js -c passes=2 -m --source-map --comments \"/SystemJS \\d/\" -o system.min.js",
+    "prepublish": "npm run build",
+    "test": "mocha -b -r esm",
+    "test:rebuild": "babel test/fixtures/es-modules --plugins=@babel/plugin-syntax-import-meta,@babel/plugin-transform-modules-systemjs --out-dir test/fixtures/register-modules",
+    "test:sjs": "mocha test/test-production.js -u tdd --reporter dot",
+    "test:systemjs": "mocha test/test-traceur.js -u tdd --reporter dot"
+  },
+  "version": "3.0.2"
+}
