@@ -1,5 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import {NgModule, Injector} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
@@ -9,6 +9,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {registerLocaleData} from '@angular/common';
 import zh from '@angular/common/locales/zh';
+import { createCustomElement } from '@angular/elements';
 
 registerLocaleData(zh);
 
@@ -18,14 +19,18 @@ registerLocaleData(zh);
     ],
     imports: [
         BrowserModule,
-        AppRoutingModule,
-        NgZorroAntdModule,
-        FormsModule,
-        HttpClientModule,
-        BrowserAnimationsModule
+        AppRoutingModule
     ],
     providers: [{provide: NZ_I18N, useValue: zh_CN}],
-    bootstrap: [AppComponent]
+    bootstrap: [],
+    entryComponents:[AppComponent]
 })
 export class AppModule {
+    constructor(private injector: Injector) {
+    }
+
+    ngDoBootstrap() {
+        const elm = createCustomElement(AppComponent, { injector: this.injector });
+        customElements.define('custom-element', elm);
+    }
 }

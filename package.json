@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "analyze": "ng build --prod --stats-json && webpack-bundle-analyzer dist/angular7-study/stats.json",
     "report": "webpack-bundle-analyzer dist/angular7-study/stats.json",
-    "startPlus": "ng serve --extra-webpack-config webpack.externals.js",
+    "startPlus": "ng serve --extra-webpack-config webpack.externals.js  --single-bundle true -o",
     "buildPlus": "ng build --extra-webpack-config webpack.externals.js --prod  --stats-json && webpack-bundle-analyzer dist/angular7-study/stats.json"
   },
   "private": true,
@@ -19,6 +19,7 @@
     "@angular/common": "~7.2.0",
     "@angular/compiler": "~7.2.0",
     "@angular/core": "~7.2.0",
+    "@angular/elements": "^7.2.11",
     "@angular/forms": "~7.2.0",
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
